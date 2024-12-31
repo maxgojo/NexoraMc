@@ -24,7 +24,7 @@ const AnnouncementCard = ({
   onClose,
 }: AnnouncementCardProps) => (
   <div
-    className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-black/40 backdrop-blur-md transition-all duration-500 ${isExpanded ? "lg:col-span-3 md:col-span-2 col-span-1" : ""} ${!isExpanded ? "hover:border-pink-500/50 hover:bg-black/60" : "border-pink-500/50 bg-black/60"}`}
+    className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-black/40 backdrop-blur-md transition-all duration-500 hover:-translate-y-1 ${isExpanded ? "lg:col-span-3 md:col-span-2 col-span-1" : ""} ${!isExpanded ? "hover:border-pink-500/50 hover:bg-black/60" : "border-pink-500/50 bg-black/60"} animate-scaleIn`}
   >
     {/* Background glow effect */}
     <div
@@ -110,25 +110,25 @@ export default function ServerAnnouncements() {
 
   const announcements = [
     {
-      title: "Открытие сервера SkyLand",
+      title: "New Survival Season Launch",
       description:
-        "Сервер SkyLand открывает свои двери! Вас ждут уникальные острова, захватывающие квесты и эпические сражения. Присоединяйтесь к нашему комьюнити!",
+        "Get ready for an epic new survival season! Featuring custom enchantments, dynamic economy, and exclusive launch rewards. Join us this weekend for an unforgettable adventure.",
       date: "2 hours ago",
       type: "news",
       image: "skylands.jpg",
     },
     {
-      title: "Вайп сервера TechnoMagic",
+      title: "PvP Tournament Series Announced",
       description:
-        "Готовьтесь к новому началу! Полный вайп сервера TechnoMagic состоится в эту пятницу. Обновленные механики, новые моды и улучшенный баланс.",
+        "Compete in our first-ever PvP Championship Series! Weekly tournaments, exclusive rewards, and a grand prize pool of over $1000. Registration opens this Friday.",
       date: "5 hours ago",
       type: "update",
       image: "technomagic.jpg",
     },
     {
-      title: "Открытие сервера SkyLand",
+      title: "Creative Build Competition",
       description:
-        "Второй сезон SkyLand начинается! Новые острова, улучшенная система крафта и множество новых возможностей ждут вас.",
+        "Show off your building skills in our monthly themed competition! This month's theme: 'Future Cities'. Top builds will be featured on our homepage and win exclusive rewards.",
       date: "1 day ago",
       type: "event",
       image: "skylands2.jpg",
@@ -159,7 +159,7 @@ export default function ServerAnnouncements() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-animation">
           {announcements.map((announcement, index) => (
             <AnnouncementCard
               key={index}

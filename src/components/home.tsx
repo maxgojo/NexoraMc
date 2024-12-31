@@ -2,6 +2,7 @@ import Navbar from "./Navbar";
 import HeroSection from "./HeroSection";
 import ServerAnnouncements from "./ServerAnnouncements";
 import FeaturedServers from "./FeaturedServers";
+import ServerStatusSection from "./ServerStatusSection";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroSection />
       <ServerAnnouncements />
       <FeaturedServers />
+      <ServerStatusSection />
     </div>
   );
 }
